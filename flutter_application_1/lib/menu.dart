@@ -137,6 +137,20 @@ class Menu extends State<MenuTab> {
           ),
         ],
       ),
+      drawer: Drawer(
+          child: ListView(
+        children: [
+          DrawerHeader(
+            child: CircleAvatar(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('images/logo.png'),
+                radius: 65.0,
+              ),
+            ),
+          ),
+          Center()
+        ],
+      )),
     );
   }
 }
