@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
+// import 'package:google_fonts/google_fonts.dart';
 
 import 'foget_password.dart';
 import 'login.dart';
@@ -9,20 +9,25 @@ class register extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Đăng Ký'),
+        title: const Text('Đăng Ký Tài Khoản'),
       ),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            padding: const EdgeInsets.all(15),
-            child: Text('Đăng Ký',
-                style: GoogleFonts.pinyonScript(
-                  fontSize: 50,
-                )),
+            padding: const EdgeInsets.all(5),
+            child: Text(
+              'Đăng Ký',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 36,
+              ),
+            ),
+            // //style: GoogleFonts.pinyonScript(
+            //   fontSize: 50,
           ),
           Container(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(5),
             child: const TextField(
               keyboardType: TextInputType.emailAddress,
               decoration: InputDecoration(
@@ -36,7 +41,7 @@ class register extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(5),
             child: const TextField(
               keyboardType: TextInputType.phone,
               decoration: InputDecoration(
@@ -50,7 +55,7 @@ class register extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(5),
             child: const TextField(
               decoration: InputDecoration(
                 labelText: 'Username',
@@ -63,7 +68,7 @@ class register extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(5),
             child: const TextField(
               obscureText: true,
               decoration: InputDecoration(
@@ -77,7 +82,7 @@ class register extends StatelessWidget {
             ),
           ),
           Container(
-            padding: const EdgeInsets.all(15),
+            padding: const EdgeInsets.all(5),
             child: ElevatedButton(
               onPressed: () {
                 showDialog(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/edit_password.dart';
 import 'package:flutter_application_1/find.dart';
 import 'package:flutter_application_1/foget_password.dart';
+import 'package:flutter_application_1/manchoi.dart';
 import 'package:flutter_application_1/test.dart';
 
 class MenuTab extends StatefulWidget {
@@ -15,19 +16,19 @@ class Menu extends State<MenuTab> {
   @override
   Widget build(BuildContext context) {
     Widget btnstart = SizedBox(
-      width: 200,
+      width: 150,
       height: 100,
       child: ElevatedButton(
         onPressed: () {
           Navigator.push(
-              context, MaterialPageRoute(builder: (context) => test()));
+              context, MaterialPageRoute(builder: (context) => ManChoi()));
         },
         child: Text('Bắt Đầu'),
         style: ElevatedButton.styleFrom(primary: Colors.blue),
       ),
     );
     Widget btnFind = SizedBox(
-      width: 200,
+      width: 150,
       height: 100,
       child: ElevatedButton(
         onPressed: () {
@@ -39,7 +40,7 @@ class Menu extends State<MenuTab> {
       ),
     );
     Widget btnFoget_password = SizedBox(
-      width: 200,
+      width: 150,
       height: 100,
       child: ElevatedButton(
         onPressed: () {
@@ -51,7 +52,7 @@ class Menu extends State<MenuTab> {
       ),
     );
     Widget btnRank = SizedBox(
-      width: 200,
+      width: 150,
       height: 100,
       child: ElevatedButton(
         onPressed: () {
@@ -65,6 +66,7 @@ class Menu extends State<MenuTab> {
     return Scaffold(
       appBar: AppBar(
         title: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
           children: [
             IconButton(
               onPressed: () {},
@@ -118,25 +120,25 @@ class Menu extends State<MenuTab> {
           ),
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        selectedItemColor: Color.fromARGB(255, 248, 248, 245),
-        backgroundColor: Color.fromARGB(255, 64, 122, 216),
-        unselectedItemColor: Color.fromARGB(255, 247, 247, 249),
-        items: [
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Bạn Bè',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
-            label: 'Home',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.history),
-            label: 'Lịch Sử',
-          ),
-        ],
-      ),
+      // bottomNavigationBar: BottomNavigationBar(
+      //   selectedItemColor: Color.fromARGB(255, 248, 248, 245),
+      //   backgroundColor: Color.fromARGB(255, 64, 122, 216),
+      //   unselectedItemColor: Color.fromARGB(255, 247, 247, 249),
+      //   items: [
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.person),
+      //       label: 'Bạn Bè',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.home_filled),
+      //       label: 'Home',
+      //     ),
+      //     BottomNavigationBarItem(
+      //       icon: Icon(Icons.history),
+      //       label: 'Lịch Sử',
+      //     ),
+      //   ],
+      // ),
     );
   }
 }
